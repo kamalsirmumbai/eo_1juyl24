@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title> Even Odd App </title>
+		<style>
+			* { font-size:40px; font-family: Ink Free; }
+			body { background-color: lightblue; }
+			h1 { background-color:black; color:white; width:50%; border-radius:40px;}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1> Even Odd App </h1>
+			<form onsubmit="show()">
+				<input type="number"  placeholder="enter integer" id="num"/>
+				<br/><br/>
+				<input type="submit" value="Check"/>
+			</form>
+			<h2 id="msg"/>
+			
+			<script>
+				function show()
+				{
+					event.preventDefault();
+					let num = document.getElementById("num");
+					let msg = document.getElementById("msg");
+
+					if (num.value === "")
+					{
+						alert("you did not enter integer ");
+						msg.innerHTML = "";
+						name.focus();
+						return;
+					}
+		
+					let n = parseInt(num.value);
+					let rep = "";
+					if (n % 2 == 0)
+							rep = "num " + n + " is even ";
+					else
+							rep = "num " + n + " is odd";
+
+					msg.innerHTML = rep;
+				}
+			</script>
+		</center>
+	</body>
+</html>
+
+
+
+
+
+
+
